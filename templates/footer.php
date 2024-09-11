@@ -9,7 +9,7 @@
 <body>
     <footer class="page-footer white">
         <div class="container">
-            <h6 class="center-align black-text">&copy; 2024 recipes.com</h6>
+            <h6 class="center-align black-text">&copy; TB 2024 recipes.com</h6>
         </div>
     </footer>
 
