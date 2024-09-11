@@ -9,10 +9,8 @@ if (isset($_POST['submit'])) {
     $user_name = $_POST['user_name'];
     $clothing_type = $_POST['clothing_type'];
     $clothing_description = $_POST['clothing_description'];
-    $price = $_POST['price'];
 
-
-    $insert_query = "INSERT INTO `clothing_tb` (`user_id`, `user_name`, `clothing_type`, `clothing_description`, `price`) VALUES (NULL, '$user_name', '$clothing_type', '$clothing_description', '$price')";
+    $insert_query = "INSERT INTO `clothing_tb` (`user_id`, `user_name`, `clothing_type`, `clothing_description`) VALUES (NULL, '$user_name', '$clothing_type', '$clothing_description')";
 
     $send_query = mysqli_query($db_connect, $insert_query);
     
@@ -38,7 +36,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="col l12 input-field">
                             <select name="clothing_type" id="clothing_type">
-                                <option value="shirts">Shirt</option>
+                                <option value="shirts">Shirts</option>
                                 <option value="jeans">Jeans</option>
                                 <option value="shoes">Shoes</option>
                                 <option value="bows">Bows</option>
@@ -47,10 +45,6 @@ if (isset($_POST['submit'])) {
                         <div class="col l12 input-field">
                             <textarea name="clothing_description" id="clothing_description" class="materialize-textarea"></textarea>
                             <label for="clothing_description">Clothing Description:</label>
-                        </div>
-                        <div class="col l12 input-field">
-                            <input type="number" name="price" id="price">
-                            <label for="price">Selling price(place the digits only):</label>
                         </div>
                         <div class="center-align">
                             <input type="submit" value="submit" name="submit" class="btn btn-large brown darken-1">

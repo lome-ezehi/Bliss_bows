@@ -6,8 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/materialize.css">
     <style>
-        .original{
+        form{
             margin-top: 90px!important;
+        }
+        img{
+            width: 1000px !important;
+            /* height: 100px !important; */
+        }
+        .name{
+            font-weight: bolder;
+        }
+        .more_details{
+            margin-bottom: 20px !important;
+        }
+        .footer{
+            margin-bottom: 20px !important;
         }
     </style>
 </head>

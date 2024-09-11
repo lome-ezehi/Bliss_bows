@@ -2,32 +2,27 @@
 include("./templates/header.php");
 include("./templates/connect.php");
 
-//write the fetch query
 $fetch_query = "SELECT * FROM `clothing_tb`";
 
-//send the query to the server
 $send_fetch_query = mysqli_query($db_connect, $fetch_query);
 
-//receive data from server
 $clothings = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
-
-// print_r($recipes);
 ?>
 
 <main>
     <div class="container original">
-        <h1 class="center-align black-text">Clothes</h1>
+        <h1 class="center-align">Clothes Ordered</h1>
         <div class="row">
             <?php foreach ($clothings as $clothing) { ?>
             <div class="col l4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <!-- <img src="./assets/img/<?php echo $recipe['recipe_type'];?>.jpg" alt="" class="responsive-image"> -->
+                        <img src="./assets/img/<?php echo $clothing['clothing_type'];?>.jpg" class="responsive-img" alt="">
                     </div>
                     <div class="card-content">
-                        <div class="orage-text text-darken-4"><?php echo $clothing['clothing_type']?></div>
-                        <strong>by: <?php echo $clothing['user_name']?></strong> <br><br>
-                        <a href="view_recipe.php" class="btn btn-flat btn-small orange darken-4 white-text">More Details</a>
+                        <div class="name">Ordered by: <?php echo $clothing['user_name'];?></div>
+                        <div class="more_details"><?php echo $clothing['clothing_description'];?></div>
+                        <a href="view_recipe.php" class="btn btn-flat btn-small brown darken-1 white-text">More Details</a>
                     </div>
                     <div class="card-action"></div>
                 </div>
