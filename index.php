@@ -27,7 +27,7 @@ $recipes = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <div class="card-content">
                         <div class="orage-text text-darken-4"><?php echo $recipe['recipe_name']?></div>
                         <strong>by: <?php echo $recipe['email']?></strong> <br><br>
-                        <a href="view_recipe.php" class="btn btn-flat btn-small orange darken-4 white-text">More Details</a>
+                        <a href="view_recipe.php?recipe_id=<?php echo $recipe['recipe_id']; ?>" class="btn btn-flat btn-small brown darken-1 white-text">More Details</a>
                     </div>
                     <div class="card-action"></div>
                 </div>
