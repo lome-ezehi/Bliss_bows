@@ -16,7 +16,6 @@ if (isset($_POST['submit'])) {
     
     if ($send_query) {
         header('Location: index.php');
-        exit(); // It's a good practice to call exit after a redirect
     } else {
         echo 'error: ' . mysqli_error($db_connect);
     }
@@ -31,10 +30,12 @@ if (isset($_POST['submit'])) {
                 <div class="col l12">
                     <form action="order_page.php" method="POST">
                         <div class="col l12 input-field">
+                            <i class="material-icons prefix">person_outline</i> 
                             <input type="text" name="user_name" id="user_name">
                             <label for="user_name">Your Name:</label>
                         </div>
                         <div class="col l12 input-field">
+                            <span class="material-symbols-outlined prefix">styler</span>
                             <select name="clothing_type" id="clothing_type">
                                 <option value="shirts">Shirts</option>
                                 <option value="jeans">Jeans</option>
@@ -43,6 +44,7 @@ if (isset($_POST['submit'])) {
                             </select>
                         </div>
                         <div class="col l12 input-field">
+                            <i class="material-icons prefix">chat_bubble_outline</i> 
                             <textarea name="clothing_description" id="clothing_description" class="materialize-textarea"></textarea>
                             <label for="clothing_description">Clothing Description:</label>
                         </div>
