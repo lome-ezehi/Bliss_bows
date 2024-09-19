@@ -4,7 +4,7 @@ include('./templates/header.php');
 
 
 //write the fetch query
-$fetch_query = "SELECT * FROM `recipe_tb` WHERE `recipe_type` = 'cake'" ;
+$fetch_query = "SELECT * FROM `recipe_tb` WHERE `recipe_type` = 'cakes'" ;
 
 //send the query to the server
 $send_fetch_query = mysqli_query($db_connect, $fetch_query);

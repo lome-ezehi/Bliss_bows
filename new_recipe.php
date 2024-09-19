@@ -33,17 +33,18 @@ if (isset($_POST['submit'])) {
 ?>
 
 <main>
-    <h1 class = "center brown-text text-darken-1">Add New Recipe</h1>
+    <h1 class = "center blue-text text-darken-4">Add New Recipe</h1>
     <div class="container">
         <div class="row">
             <div class="col l12">
                 <form action="new_recipe.php" method="POST">
                     <div class="col l12 input-field">
-                        <input type="email" name="email" id="email" >
+                        <input type="email" name="email" id="email" placeholder="e.g Doe" class="validate">
+                        <span class="helper-text" data-error="wrong" data-success="Correct"></span>
                         <label for="email">Email:</label>
                     </div>
                     <div class="col l12 input-field">
-                        <input type="text" name="recipe_name" id="recipe_name" >
+                        <input type="text" name="recipe_name" id="recipe_name" placeholder="e.g Chocolate Cake Recipe">
                         <label for="recipe_name">Recipe name</label>
                     </div>
                     <div class="col l12 input-field">
@@ -52,14 +53,14 @@ if (isset($_POST['submit'])) {
                             <option value="chicken">Chicken</option>
                             <option value="soup">Soup</option>
                         </select>
-                        <label>Recipe Type</label>
+                        <label class="type">Recipe Type</label>
                     </div>
                     <div class="col l12 input-field">
-                        <textarea name="recipe_description" id="recipe_description" class="materialize-textarea"></textarea>
+                        <textarea name="recipe_description" id="recipe_description" class="materialize-textarea" placeholder="e.g John"></textarea>
                         <label for="recipe_description">Recipe Description:</label>
                     </div>
                     <div class="button center">
-                        <input type="submit" value="submit" name="submit" class="btn center brown darken-1">
+                        <input type="submit" value="submit" name="submit" class="btn center blue darken-4">
                     </div>
                 </form>
             </div>
